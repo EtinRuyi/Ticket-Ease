@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net7.0": {
+      "Ticket-Ease.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Ticket-Ease.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Ticket-Ease.Application.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Ticket-Ease.Application/1.0.0": {
+      "type": "project",
+      "path": "../Ticket-Ease.Application/Ticket-Ease.Application.csproj",
+      "msbuildProject": "../Ticket-Ease.Application/Ticket-Ease.Application.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net7.0": [
+      "Ticket-Ease.Application >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\omoru\\.nuget\\packages\\": {},
@@ -39,7 +58,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\omoru\\Desktop\\Ticket-Ease\\Ticket-Ease\\Ticket-Ease.Application\\Ticket-Ease.Application.csproj": {
+              "projectPath": "C:\\Users\\omoru\\Desktop\\Ticket-Ease\\Ticket-Ease\\Ticket-Ease.Application\\Ticket-Ease.Application.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
