@@ -6,7 +6,14 @@ C:\Users\omoru\Desktop\Ticket-Ease\Ticket-Ease\Ticket-Ease\bin\Debug\net7.0\Tick
 C:\Users\omoru\Desktop\Ticket-Ease\Ticket-Ease\Ticket-Ease\bin\Debug\net7.0\Ticket-Ease.dll
 C:\Users\omoru\Desktop\Ticket-Ease\Ticket-Ease\Ticket-Ease\bin\Debug\net7.0\Ticket-Ease.pdb
 C:\Users\omoru\Desktop\Ticket-Ease\Ticket-Ease\Ticket-Ease\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\omoru\Desktop\Ticket-Ease\Ticket-Ease\Ticket-Ease\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\omoru\Desktop\Ticket-Ease\Ticket-Ease\Ticket-Ease\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Users\omoru\Desktop\Ticket-Ease\Ticket-Ease\Ticket-Ease\bin\Debug\net7.0\Serilog.dll
+C:\Users\omoru\Desktop\Ticket-Ease\Ticket-Ease\Ticket-Ease\bin\Debug\net7.0\Serilog.Extensions.Hosting.dll
+C:\Users\omoru\Desktop\Ticket-Ease\Ticket-Ease\Ticket-Ease\bin\Debug\net7.0\Serilog.Extensions.Logging.dll
+C:\Users\omoru\Desktop\Ticket-Ease\Ticket-Ease\Ticket-Ease\bin\Debug\net7.0\Serilog.Settings.Configuration.dll
+C:\Users\omoru\Desktop\Ticket-Ease\Ticket-Ease\Ticket-Ease\bin\Debug\net7.0\Serilog.Sinks.Console.dll
+C:\Users\omoru\Desktop\Ticket-Ease\Ticket-Ease\Ticket-Ease\bin\Debug\net7.0\Serilog.Sinks.File.dll
 C:\Users\omoru\Desktop\Ticket-Ease\Ticket-Ease\Ticket-Ease\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\omoru\Desktop\Ticket-Ease\Ticket-Ease\Ticket-Ease\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\omoru\Desktop\Ticket-Ease\Ticket-Ease\Ticket-Ease\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
