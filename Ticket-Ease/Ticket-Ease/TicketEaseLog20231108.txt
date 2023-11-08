@@ -1,0 +1,14 @@
+2023-11-08 23:09:38.919 +01:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-11-08 23:09:39.276 +01:00 [INF] Now listening on: https://localhost:7189
+2023-11-08 23:09:39.281 +01:00 [INF] Now listening on: http://localhost:5259
+2023-11-08 23:09:39.289 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-08 23:09:39.292 +01:00 [INF] Hosting environment: Development
+2023-11-08 23:09:39.296 +01:00 [INF] Content root path: C:\Users\omoru\Desktop\Ticket-Ease\Ticket-Ease\Ticket-Ease
+2023-11-08 23:09:42.410 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7189/swagger/index.html - -
+2023-11-08 23:09:42.818 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7189/swagger/index.html - - - 200 - text/html;charset=utf-8 409.9507ms
+2023-11-08 23:09:42.832 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - -
+2023-11-08 23:09:42.858 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7189/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 25.1216ms
+2023-11-08 23:09:42.863 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7189/_vs/browserLink - -
+2023-11-08 23:09:42.930 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7189/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 67.5035ms
+2023-11-08 23:09:43.142 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7189/swagger/v1/swagger.json - -
+2023-11-08 23:09:43.197 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7189/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 54.6049ms
