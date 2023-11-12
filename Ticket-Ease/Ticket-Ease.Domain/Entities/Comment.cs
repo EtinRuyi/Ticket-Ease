@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Ticket_Ease.Domain.Entities
+namespace TicketEase.Domain.Entities
 {
-    internal class Comment
+    public class Comment : BaseEntity
     {
+        [ForeignKey("TicketId")]
+        public string TicketId { get; set; }
+        public string Comments { get; set; }
     }
 }

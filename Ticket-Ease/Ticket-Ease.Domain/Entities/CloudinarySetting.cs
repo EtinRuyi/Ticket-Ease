@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ticket_Ease.Domain.Entities
+namespace TicketEase.Domain.Entities
 {
-    internal class CloudinarySetting
+    public class CloudinarySetting
     {
+        public string CloudName { get; set; } = string.Empty;
+        public string APIKey { get; set; } = string.Empty;
+        public string APISecret { get; set; } = string.Empty;
     }
 }

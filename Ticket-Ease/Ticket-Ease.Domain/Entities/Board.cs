@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Ticket_Ease.Domain.Entities
+﻿namespace TicketEase.Domain.Entities
 {
-    internal class Board
+    public class Board : BaseEntity
     {
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public ICollection<Project> Projects { get; set; }
     }
 }

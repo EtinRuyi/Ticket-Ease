@@ -1,12 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Ticket_Ease.Domain.Entities
+namespace TicketEase.Domain.Entities
 {
-    internal class Manager
+    public class Manager
     {
+        [Key]
+        public string Id { get; set; }
+        public string CompanyName { get; set; }
+        public string BusinessEmail { get; set; }
+        public string BusinessPhone { get; set; }
+        public string CompanyAddress { get; set; }
+        public string State { get; set; }
+        public DateTime CreatedDate { get; set; }
+        public DateTime UpdatedDate { get; set; }
+        public ICollection<AppUser> Users { get; set; }
     }
 }
