@@ -1,33 +1,36 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
+using Ticket_Ease.Persistence.Context;
+using Ticket_Ease.Persistence.Repositories;
+using TicketEase.Application.Interfaces.Repositories;
+using TicketEase.Domain.Entities;
+using TicketEase.Persistence.Context;
 
-namespace Ticket_Ease.Persistence.Repositories
+namespace TicketEase.Persistence.Repositories
 {
-    public PaymentRepository(TicketEaseDbContext ticketEaseDbContext) : base(ticketEaseDbContext) { }
-
-    public void AddPayment(Payment payment) => Add(payment);
-
-    public void DeletePayment(Payment payment) => Delete(payment);
-
-    public List<Payment> FindPayment(Expression<Func<Payment, bool>> condition)
+    public class PaymentRepository : GenericRepository<Payment>, IPaymentRepository
     {
-        return Find(condition);
-    }
+        public PaymentRepository(TicketEaseDbContext ticketEaseDbContext) : base(ticketEaseDbContext) { }
 
-    public Payment GetPaymentById(string id)
-    {
-        return GetById(id);
-    }
+        public void AddPayment(Payment payment) => Add(payment);
 
-    public List<Payment> GetPayments()
-    {
-        return GetAll();
-    }
+        public void DeletePayment(Payment payment) => Delete(payment);
 
-    public void UpdatePayment(Payment payment) => Update(payment);
-}
+        public List<Payment> FindPayment(Expression<Func<Payment, bool>> condition)
+        {
+            return Find(condition);
+        }
+
+        public Payment GetPaymentById(string id)
+        {
+            return GetById(id);
+        }
+
+        public List<Payment> GetPayments()
+        {
+            return GetAll();
+        }
+
+        public void UpdatePayment(Payment payment) => Update(payment);
+    }
 }

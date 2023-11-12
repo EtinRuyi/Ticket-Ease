@@ -3,8 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Ticket_Ease.Persistence.Context;
+using Ticket_Ease.Persistence.Repositories;
+using TicketEase.Application.Interfaces.Repositories;
+using TicketEase.Persistence.Context;
 
-namespace Ticket_Ease.Persistence.Repositories
+namespace TicketEase.Persistence.Repositories
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
@@ -16,6 +20,8 @@ namespace Ticket_Ease.Persistence.Repositories
 
         public void Add(T entity) => _ticketEaseDbContext.Set<T>().Add(entity);
 
+        public void DeleteAll(List<T> entity) => _ticketEaseDbContext.Set<T>().RemoveRange(entity);
+
         public void Delete(T entity) => _ticketEaseDbContext.Set<T>().Remove(entity);
 
         public List<T> Find(System.Linq.Expressions.Expression<Func<T, bool>> predicate) => _ticketEaseDbContext.Set<T>().Where(predicate).ToList();
@@ -25,6 +31,7 @@ namespace Ticket_Ease.Persistence.Repositories
         public T GetById(string id) => _ticketEaseDbContext.Set<T>().Find(id);
 
         public void Update(T entity) => _ticketEaseDbContext.Set<T>().Update(entity);
+
 
         // Task UpdateEntityAsync<T>(T entity) where T : class;
     }

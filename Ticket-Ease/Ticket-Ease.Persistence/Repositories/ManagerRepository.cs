@@ -1,11 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
+using Ticket_Ease.Persistence.Context;
+using Ticket_Ease.Persistence.Repositories;
+using TicketEase.Application.Interfaces.Repositories;
+using TicketEase.Domain.Entities;
+using TicketEase.Persistence.Context;
 
-namespace Ticket_Ease.Persistence.Repositories
+namespace TicketEase.Persistence.Repositories
 {
     public class ManagerRepository : GenericRepository<Manager>, IManagerRepository
     {

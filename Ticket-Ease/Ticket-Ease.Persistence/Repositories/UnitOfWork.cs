@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Ticket_Ease.Persistence.Context;
+using Ticket_Ease.Persistence.Repositories;
+using TicketEase.Application.Interfaces.Repositories;
+using TicketEase.Persistence.Context;
 
-namespace Ticket_Ease.Persistence.Repositories
+namespace TicketEase.Persistence.Repositories
 {
+
     public class UnitOfWork : IUnitOfWork
     {
         private readonly TicketEaseDbContext _ticketEaseDbContext;
@@ -34,14 +34,16 @@ namespace Ticket_Ease.Persistence.Repositories
 
         public IUserRepository UserRepository { get; private set; }
 
-        public int SaveChanges()
-        {
-            return _ticketEaseDbContext.SaveChanges();
-        }
-
         public void Dispose()
         {
             _ticketEaseDbContext.Dispose();
         }
+
+        public int SaveChanges()
+        {
+            return _ticketEaseDbContext.SaveChanges();
+        }
     }
+
 }
+

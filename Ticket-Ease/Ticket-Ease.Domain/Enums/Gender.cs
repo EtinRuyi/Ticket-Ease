@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Ticket_Ease.Domain.Enums
+﻿namespace TicketEase.Domain.Enums
 {
-    internal class Gender
+    public enum Gender
     {
+        Male,
+        Female
     }
 }

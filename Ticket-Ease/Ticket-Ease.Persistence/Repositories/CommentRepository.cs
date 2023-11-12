@@ -1,31 +1,36 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using System.Linq.Expressions;
+using System.Xml.Linq;
+using Ticket_Ease.Persistence.Context;
+using TicketEase.Application.Interfaces.Repositories;
+using TicketEase.Domain.Entities;
+using TicketEase.Persistence.Context;
 
-namespace Ticket_Ease.Persistence.Repositories
+namespace TicketEase.Persistence.Repositories
 {
-    public class GenericRepository<T> : IGenericRepository<T> where T : class
+    public class CommentRepository : GenericRepository<Comment>, ICommentRepository
     {
-        private readonly TicketEaseDbContext _ticketEaseDbContext;
-        public GenericRepository(TicketEaseDbContext ticketEaseDbContext)
+        public CommentRepository(TicketEaseDbContext ticketEaseDbContext) : base(ticketEaseDbContext) { }
+        public void AddComment(Comment comment) => Add(comment);
+
+        public void DeleteComment(Comment comment) => Delete(comment);
+
+        public List<Comment> FindComment(Expression<Func<Comment, bool>> condition)
         {
-            _ticketEaseDbContext = ticketEaseDbContext;
+            return Find(condition);
         }
 
-        public void Add(T entity) => _ticketEaseDbContext.Set<T>().Add(entity);
+        public Comment GetCommentById(string id)
+        {
+            return GetById(id);
+        }
 
-        public void Delete(T entity) => _ticketEaseDbContext.Set<T>().Remove(entity);
+        public List<Comment> GetComments()
+        {
+            return GetAll();
+        }
 
-        public List<T> Find(System.Linq.Expressions.Expression<Func<T, bool>> predicate) => _ticketEaseDbContext.Set<T>().Where(predicate).ToList();
+        public void UpdateComment(Comment comment) => Update(comment);
 
-        public List<T> GetAll() => _ticketEaseDbContext.Set<T>().ToList();
-
-        public T GetById(string id) => _ticketEaseDbContext.Set<T>().Find(id);
-
-        public void Update(T entity) => _ticketEaseDbContext.Set<T>().Update(entity);
-
-        // Task UpdateEntityAsync<T>(T entity) where T : class;
     }
 }

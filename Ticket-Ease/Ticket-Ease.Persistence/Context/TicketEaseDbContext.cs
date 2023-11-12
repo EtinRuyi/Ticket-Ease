@@ -1,13 +1,11 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Sockets;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Linq;
+using TicketEase.Domain.Entities;
 
-namespace Ticket_Ease.Persistence.Context
+namespace TicketEase.Persistence.Context
 {
     public class TicketEaseDbContext : IdentityDbContext<AppUser>
     {
@@ -24,11 +22,6 @@ namespace Ticket_Ease.Persistence.Context
         public DbSet<Ticket> Tickets { get; set; }
 
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
-            Seeder.SeedData(modelBuilder);
-        }
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
             foreach (var item in ChangeTracker.Entries<BaseEntity>())
@@ -48,5 +41,7 @@ namespace Ticket_Ease.Persistence.Context
             }
             return await base.SaveChangesAsync(cancellationToken);
         }
+
     }
+
 }
