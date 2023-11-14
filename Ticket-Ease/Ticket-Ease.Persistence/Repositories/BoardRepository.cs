@@ -1,6 +1,4 @@
 ﻿using System.Linq.Expressions;
-using Ticket_Ease.Persistence.Context;
-using TicketEase.Application.Interfaces.Repositories;
 using TicketEase.Domain.Entities;
 using TicketEase.Persistence.Context;
 
