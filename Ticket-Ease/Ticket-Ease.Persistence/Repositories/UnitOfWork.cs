@@ -1,7 +1,4 @@
-﻿using Ticket_Ease.Persistence.Context;
-using Ticket_Ease.Persistence.Repositories;
-using TicketEase.Application.Interfaces.Repositories;
-using TicketEase.Persistence.Context;
+﻿using TicketEase.Persistence.Context;
 
 namespace TicketEase.Persistence.Repositories
 {

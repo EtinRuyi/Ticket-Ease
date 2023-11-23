@@ -1,10 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Ticket_Ease.Persistence.Context;
-using TicketEase.Application.Interfaces.Repositories;
-using TicketEase.Application.Interfaces.Services;
-using TicketEase.Application.ServicesImplementation;
 using TicketEase.Domain.Entities;
 using TicketEase.Persistence.Context;
 using TicketEase.Persistence.Repositories;
