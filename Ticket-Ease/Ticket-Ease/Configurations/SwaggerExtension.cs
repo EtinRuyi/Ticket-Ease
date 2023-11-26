@@ -1,71 +1,43 @@
-﻿//using Microsoft.OpenApi.Models;
+﻿using microsoft.openapi.models;
 
-//namespace Ticket_Ease.Configurations
-//{
-//    public static class SwaggerExtension
-//    {
-//        public static void AddSwagger(this IServiceCollection services)
-//        {
-//            services.AddSwaggerGen(config =>
-//            {
-//                config.SwaggerDoc("v1", new OpenApiInfo
-//                {
-//                    Title = "Ticket Ease",
-//                    Version = "v1",
-//                    Description = "Ticket-Ease is a web-based application that streamlines and optimizes the management of task projects"
-//                });
-//                config.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
-//                {
-//                    In = ParameterLocation.Header,
-//                    Description = "Insert Token",
-//                    Name = "Authorization",
-//                    Type = SecuritySchemeType.Http,
-//                    BearerFormat = "Jwt",
-//                    Scheme = "Bearer"
-//                });
-//                config.AddSecurityRequirement(new OpenApiSecurityRequirement
-//                {
-//                    {
-//                        new OpenApiSecurityScheme
-//                        {
-//                            Reference = new OpenApiReference
-//                            {
-//                                Type = ReferenceType.SecurityScheme,
-//                                Id = "Bearer"
-//                            }
-//                        },
-//                        new string[] {}
-//                    }
-//                });
-//            });
-//        }
-//    }
-//}
-
-namespace TicketEase.Mapper
+namespace ticket_ease.configurations
 {
-
-
-    public class MapperProfile : Profile
+    public static class swaggerextension
     {
-        public MapperProfile()
+        public static void addswagger(this iservicecollection services)
         {
-            CreateMap<ProjectRequestDto, Project>()
-               .ForMember(dest => dest.Id, opt => opt.Ignore())
-               .ForMember(dest => dest.BoardId, opt => opt.Ignore());
-
-            CreateMap<UpdateProjectRequestDto, Project>();
-
-            CreateMap<Project, ProjectReponseDto>().ReverseMap();
-            CreateMap<Manager, EditManagerDto>().ReverseMap();
-            CreateMap<BoardRequestDto, Board>();
-            CreateMap<Board, BoardResponseDto>().ReverseMap();
-            CreateMap<Ticket, TicketDto>().ReverseMap();
-            CreateMap<UpdateTicketDto, Ticket>();
-            CreateMap<AppUser, AppUserDto>();
-            CreateMap<PageResult<IEnumerable<AppUser>>, PageResult<IEnumerable<AppUserDto>>>();
-            CreateMap<UpdateUserDto, AppUser>();
+            services.addswaggergen(config =>
+            {
+                config.swaggerdoc("v1", new openapiinfo
+                {
+                    title = "ticket ease",
+                    version = "v1",
+                    description = "ticket-ease is a web-based application that streamlines and optimizes the management of task projects"
+                });
+                config.addsecuritydefinition("bearer", new openapisecurityscheme
+                {
+                    in = parameterlocation.header,
+                    description = "insert token",
+                    name = "authorization",
+                    type = securityschemetype.http,
+                    bearerformat = "jwt",
+                    scheme = "bearer"
+                });
+                config.addsecurityrequirement(new openapisecurityrequirement
+                {
+                    {
+                        new openapisecurityscheme
+                        {
+                            reference = new openapireference
+                            {
+                                type = referencetype.securityscheme,
+                                id = "bearer"
+                            }
+                        },
+                        new string[] {}
+                    }
+                });
+            });
         }
     }
 }
-
