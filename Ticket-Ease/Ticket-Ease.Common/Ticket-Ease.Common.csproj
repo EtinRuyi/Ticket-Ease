@@ -19,4 +19,8 @@
     <ProjectReference Include="..\Ticket-Ease.Application\Ticket-Ease.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Utilities\" />
+  </ItemGroup>
+
 </Project>
